@@ -1,0 +1,179 @@
+:root {
+  --primary-color: #F15A24;
+  --secondary-color: #1a1a1a;
+  --text-color: #4E4B66;
+  --services-bg-color:#f7f7f7;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  color: var(--text-color);
+}
+
+h1 {
+  font-weight: 900;
+  /* minimaliai 39px, dabartine, maximaliai 61px */
+  font-size: clamp(39px, 5vw, 61px);
+  line-height: clamp(47px, 7.5vw, 74px);
+  color: var(--secondary-color);
+}
+
+p {
+  font-weight: 400;
+  line-height: 24px;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.primary-btm {
+  padding: 16px 32px;
+  background-color: var(--primary-color);
+  color: #fff;
+  line-height: 19px;
+  font-weight: 700;
+  border: 1px solid var(--primary-color);
+  transition: all 0.3s;
+}
+.primary-btm:hover {
+  color: var(--primary-color);
+  background-color: #fff;
+}
+
+.top-header,
+.main-section,
+.services-section {
+  max-width: 1280px;
+  margin: auto;
+}
+
+.top-header {
+  padding: 24px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.top-header .burger-btn,
+.top-header .burger-btn rect {
+  transition: all 0.3s;
+}
+.top-header__navigation, .top-header__contact-btn {
+  display: none;
+}
+.top-header .burger-btn {
+  cursor: pointer;
+}
+.top-header .burger-btn:hover {
+  transform: scale(1.1);
+}
+.top-header .burger-btn:hover rect {
+  fill: #fe9872;
+}
+@media (min-width: 769px) {
+  .top-header {
+    padding: 24px 32px;
+  }
+}
+@media (min-width: 1024px) {
+  .top-header {
+    padding: 24px 40px;
+  }
+  .top-header__navigation, .top-header__contact-btn {
+    display: flex;
+  }
+  .top-header__navigation {
+    gap: 40px;
+  }
+  .top-header__navigation li a {
+    line-height: 24px;
+    color: var(--text-color);
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s;
+  }
+  .top-header__navigation li a:hover {
+    color: var(--primary-color);
+    border-bottom-color: 2px solid var(--primary-color);
+  }
+  .top-header__contact-btn {
+    border: 1px solid var(--primary-color);
+    border-radius: 24px;
+    padding: 16px 48px;
+    color: var(--primary-color);
+    font-weight: 700;
+    transition: all 0.3s;
+  }
+  .top-header__contact-btn:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+  }
+  .top-header .burger-btn {
+    display: none;
+  }
+}
+
+/* atvaizduojam ties plansete */
+.main-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 60px 16px 40px 16px;
+}
+.main-section__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.main-section__picture {
+  width: 100%;
+  height: clamp(280px, 50vw, 510px);
+}
+.main-section__picture img {
+  border-radius: 40px;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main-section__content-wrapper p {
+  margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .main-section {
+    padding: 60px 32px 40px 32px;
+  }
+}
+@media (min-width: 1024px) {
+  .main-section {
+    padding: 60px 40px 52px 40px;
+  }
+}
+@media (max-width: 1279px) {
+  .main-section h1 {
+    max-width: 578px;
+  }
+  .main-section p {
+    max-width: 63ch;
+  }
+}
+@media (min-width: 1280px) {
+  .main-section__content {
+    flex-direction: row;
+    text-align: left;
+    align-items: start;
+  }
+}
+.main-section h1, .main-section__content-wrapper {
+  flex: 1;
+}/*# sourceMappingURL=styles.css.map */
